@@ -1,9 +1,5 @@
-# TableTop Menus microservice
-[![Build Status](https://travis-ci.org/TableTopLtd/tt-menus.svg?branch=master)](https://travis-ci.org/TableTopLtd/tt-menus)
-## Prerequisites
-
-```bash
-docker run -d --name tt-menus-db -e POSTGRES_USER=dbuser -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=menu -p 5433:5432 postgres:latest
+# TableTop reservations microservice
+[![Build Status](https://travis-ci.org/TableTopLtd/tt-reservations.svg?branch=master)](https://travis-ci.org/TableTopLtd/tt-reservations)
 ```
 
 ## When developing
@@ -23,23 +19,23 @@ Microservice finds database through ip
 
 To test the service you should go to
 ```
-http://localhost:8081/v1/menus
+http://localhost:8085/v1/reservations
 ```
-To see a list of all menus.
+To see a list of all reservations.
 
 ```
-http://localhost:8081/v1/menus/1
+http://localhost:8085/v1/reservations/1
 ```
 To see the first one, etc.
 
 ## Build docker image
 ```bash
-docker build . -t tt-menus:X
+docker build . -t tt-reservations:X
 ```
 
 [Optional] Define your own X
 
 ## Run application in Docker
 ```bash
-docker run -p 8081:8081 tt-menus:X
+docker run -p 8085:8085 tt-reservations:X
 ```
