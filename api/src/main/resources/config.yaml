@@ -6,13 +6,13 @@ kumuluzee:
   server:
     base-url: http://localhost:8085
     http:
-      port: 8081
+      port: 8085
   discovery:
     etcd:
       hosts: http://localhost:2379
   logs:
       config-file: '<?xml version="1.0" encoding="UTF-8"?>
-                    <Configuration name="menus">
+                    <Configuration name="reservations">
                         <Appenders>
                             <Console name="console" target="SYSTEM_OUT">
                                 <PatternLayout pattern="%d %p %marker %m %X %ex %n"/>
